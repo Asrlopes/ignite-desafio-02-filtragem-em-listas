@@ -7,10 +7,6 @@ defmodule ListFilter do
     |> get_odd_numbers
   end
 
-  # defp convert_string_to_number(list)
-
-  # defp get_numeric_items(list), do: Enum.filter(list, fn item -> Kernel.is_number(item) end)
-
   defp get_numeric_items(list), do: Enum.map(list, fn item -> validate_number(item) end)
 
   defp validate_number(item) do
